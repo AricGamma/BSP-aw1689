@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OEMInput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <Description>Windows 10 IoT Core Allwinner BPI-M64 production ffu</Description>
+  <SOC>AW1689</SOC>
+  <SV>Allwinner Technology</SV>
+  <Device>BPI-M64</Device>
+  <ReleaseType>Test</ReleaseType>
+  <BuildType>fre</BuildType>
+  <SupportedLanguages>
+    <UserInterface>
+      <Language>en-us</Language>
+    </UserInterface>
+    <Keyboard>
+      <Language>en-us</Language>
+    </Keyboard>
+    <Speech>
+      <Language>en-us</Language>
+    </Speech>
+  </SupportedLanguages>
+  <BootUILanguage>en-us</BootUILanguage>
+  <BootLocale>en-us</BootLocale>
+  <Resolutions>
+    <Resolution>1280x800</Resolution>
+  </Resolutions>
+  <AdditionalFMs>
+    <AdditionalFM>%AKROOT%\FMFiles\arm\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>
+    <AdditionalFM>%WOA_ROOT%\loong\prebuilt\aw1689\FMFiles\IoTUAPA64FM.xml</AdditionalFM>
+    <AdditionalFM>%WOA_ROOT%\loong\prebuilt\aw1689\FMFiles\AW1689FM.xml</AdditionalFM>
+  </AdditionalFMs>
+  <Features>
+    <Microsoft>
+      <Feature>IOT_EFIESP</Feature>
+      <Feature>IOT_DMAP_DRIVER</Feature>
+      <Feature>IOT_UAP_OOBE</Feature> 
+    </Microsoft>
+    <OEM>
+
+<!--Feature>PLACEHOLDER_FEATURE</Feature--> 
+<Feature>AW1689_BOOT0</Feature> 
+<Feature>AW1689_UEFI</Feature> 
+<Feature>AW1689_BOOTLOADER</Feature> 
+<Feature>AW1689_DMA</Feature> 
+<Feature>AW1689_SDHC</Feature> 
+<Feature>AW1689_GPIO</Feature> 
+<Feature>AW1689_I2C</Feature> 
+<Feature>AW1689_CODEC</Feature> 
+<Feature>AW1689_VIRTUALI2S</Feature> 
+<Feature>AW1689_AUDIOADAPTER</Feature> 
+<Feature>AW1689_ADCBUTTON</Feature> 
+<Feature>AW1689_KDNET_USB</Feature> 
+<Feature>TP_GT82X</Feature> 
+<Feature>RTWLANS</Feature> 
+
+<Feature>OEM_CustomCmd</Feature>
+<Feature>OEM_AppxIoTCoreDefaultApp</Feature> 
+
+<Feature>PRODUCTION</Feature> 
+</OEM> 
+  </Features>
+  <PackageFiles />
+  <Product>Windows 10 IoT Core</Product>
+</OEMInput>

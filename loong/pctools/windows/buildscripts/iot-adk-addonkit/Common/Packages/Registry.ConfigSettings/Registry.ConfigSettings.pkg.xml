@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"
+         Owner="Allwinner" OwnerType="OEM" ReleaseType="Production"
+         Platform="Common" Component="Registry" SubComponent="ConfigSettings">
+   <Components>
+      <OSComponent>
+         <RegKeys>
+             <!-- Specify your registry settings here
+             <RegKey KeyName="$(hklm.software)\$(OEMNAME)\Test">
+                <RegValue Name="StringValue" Value="Test string" Type="REG_SZ"/>
+                <RegValue Name="DWordValue" Value="12AB34CD" Type="REG_DWORD"/>
+                <RegValue Name="BinaryValue" Value="12,AB,CD,EF" Type="REG_BINARY"/>
+             </RegKey>
+             <RegKey KeyName="$(hklm.software)\$(OEMNAME)\EmptyKey"/>
+             -->
+             <RegKey KeyName="$(hklm.software)\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher">
+                <RegValue Name="AllowedExecutableFilesList" Value="c:\windows\system32\cmd.exe" Type="REG_MULTI_SZ"/>
+             </RegKey>
+         </RegKeys>
+         <!--<Files>
+            Specify your files for inclusion here. Default destination for this is default windows/system32
+            <File Source="filename.txt" />
+            <File Source="filename2.txt"
+                DestinationDir="$(runtime.root)\OEMInstall" Name="filename2.txt"/>
+         </Files> -->
+      </OSComponent>
+   </Components>
+</Package>

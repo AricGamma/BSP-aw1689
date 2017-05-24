@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"
+    Owner="$(OEMNAME)"
+    OwnerType="OEM"
+    ReleaseType="Production"
+    Platform="Common"
+    Component="Provisioning"
+    SubComponent="Manual">
+    <Components>
+       <OSComponent>
+       <Files>
+        <!-- Manual Provisioning
+             Packages are copied to OEM folder
+             Provisioning to be triggered in OEMCustomisation.cmd file by calling provtool.
+             Advantange of this approach is that we can control the order of applying the provisioning packages
+        -->
+        <File Source="ProvSetA.ppkg"
+                DestinationDir="$(runtime.root)\OEMInstall\Provisioning" Name="ProvSetA.ppkg"/>
+        <File Source="ProvSetB.ppkg"
+                DestinationDir="$(runtime.root)\OEMInstall\Provisioning" Name="ProvSetB.ppkg"/>
+       </Files>
+       </OSComponent>
+    </Components>
+ </Package>

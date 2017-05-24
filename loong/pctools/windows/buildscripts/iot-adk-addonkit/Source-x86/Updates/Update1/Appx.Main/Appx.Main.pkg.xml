@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"
+    Owner="$(OEMNAME)"
+    OwnerType="OEM"
+    ReleaseType="Production"
+    Platform="x86"
+    Component="Appx"
+    SubComponent="Main">
+    <Components>
+       <OSComponent>
+         <Files>
+			 <!-- Copy batch files for appx installation -->
+			 <!-- DestinationDir should be always starting with global macros defined in %KITROOT%\Tools\bin\i386\pkggen.cfg.xml-->
+				<File Source="$(PRJDIR)\Packages\Appx.Main\AppInstall\AppInstall.cmd"
+				      DestinationDir="$(runtime.root)\AppInstall"
+				      Name="AppInstall.cmd"/>
+				<File Source="$(PRJDIR)\Packages\Appx.Main\AppInstall\AppInstall_TH.cmd"
+				      DestinationDir="$(runtime.root)\AppInstall"
+				      Name="AppInstall_TH.cmd"/>					  
+				<File Source="$(PRJDIR)\Packages\Appx.Main\AppInstall\DeployTask.cmd"
+				      DestinationDir="$(runtime.root)\AppInstall"
+				      Name="DeployTask.cmd"/>
+				<File Source="$(PRJDIR)\Packages\Appx.Main\AppInstall\AppxConfig.cmd"
+				      DestinationDir="$(runtime.root)\AppInstall"
+				      Name="AppxConfig.cmd"/>	
+
+			<!-- Copy appx files and its dependencies -->
+             <File Source="$(PRJDIR)\Updates\Update1\Appx.Main\AppInstall\MainAppx_1.0.2.0_x86.appx"
+			    DestinationDir="$(runtime.root)\AppInstall" Name="MainAppx_1.0.2.0_x86.appx"/>
+             <File Source="$(PRJDIR)\Updates\Update1\Appx.Main\AppInstall\MainAppx_1.0.2.0_x86.cer"
+			    DestinationDir="$(runtime.root)\AppInstall" Name="MainAppx_1.0.2.0_x86.cer"/>
+             <File Source="$(PRJDIR)\Updates\Update1\Appx.Main\AppInstall\Microsoft.NET.Native.Runtime.1.1.appx"
+			    DestinationDir="$(runtime.root)\AppInstall" Name="Microsoft.NET.Native.Runtime.1.1.appx"/>
+             <File Source="$(PRJDIR)\Updates\Update1\Appx.Main\AppInstall\Microsoft.NET.Native.Framework.1.2.appx"
+			    DestinationDir="$(runtime.root)\AppInstall" Name="Microsoft.NET.Native.Framework.1.2.appx"/>
+             <File Source="$(PRJDIR)\Updates\Update1\Appx.Main\AppInstall\Microsoft.VCLibs.x86.14.00.appx"
+			    DestinationDir="$(runtime.root)\AppInstall" Name="Microsoft.VCLibs.x86.14.00.appx"/>
+        </Files>
+       </OSComponent>
+    </Components>
+ </Package>

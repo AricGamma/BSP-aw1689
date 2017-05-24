@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FeatureManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+	
+  <BasePackages>
+   	<PackageFile Path="$(mspackageroot)\Retail\$(cputype)\$(buildtype)" Name="RASPBERRYPI.RPi2.RT.WLAN.cab"/>
+   	<PackageFile Path="$(mspackageroot)\Retail\$(cputype)\$(buildtype)" Name="RASPBERRYPI.RPi2.USBWIFI.cab"/>
+   	<PackageFile Path="%SocPrebuiltCabPath%" Name="RASPBERRYPI.RPi.Wifi.bcmdhd63.cab"/>
+  </BasePackages>
+  
+  <Features>
+    <Microsoft />    
+    <MSFeatureGroups />
+   
+    <OEM>       
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.AwDma.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_DMA</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.sunxii2c.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_I2C</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.SunxiGpio.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_GPIO</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.SunxiSdhc.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_SDHC</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.Codec.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_CODEC</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.VirtualI2S.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_VIRTUALI2S</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.AudioAdapter.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_AUDIOADAPTER</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+	  
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.Adcbutton.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_ADCBUTTON</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.kd_8003_000b.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_KDNET_USB</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.gt82x.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>TP_GT82X</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.Ft5x.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>TP_FT5X</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="aw1689.Gt9xx.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>TP_GT9XX</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.Silead.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>TP_SILEAD</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+     
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.Rtwlans.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>RTWLANS</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.Ethmini.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_ETHMINI</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.sunxicir.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_SUNXICIR</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.aw1689.vhfhid.cab" FeatureIdentifierPackage="true">
+        <FeatureIDs>
+          <FeatureID>AW1689_VHFHID</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+        
+   </OEM>
+   <OEMFeatureGroups />
+  </Features>
+</FeatureManifest>

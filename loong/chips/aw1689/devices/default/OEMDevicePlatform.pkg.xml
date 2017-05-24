@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package ReleaseType="Test" 
+	 OwnerType="OEM" 
+	 Platform="aw1689" 
+	 Owner="Allwinner" 
+	 Component="aw1689" 
+	 SubComponent="DevicePlatform" 
+	 xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00">
+  <Components>
+    <OSComponent>
+      <Files>
+        <File Source="DevicePlatform.xml" DestinationDir="$(runtime.root)\Windows\ImageUpdate" Name="OEMDevicePlatform.xml" />
+      </Files>
+    </OSComponent>
+  </Components>
+</Package>

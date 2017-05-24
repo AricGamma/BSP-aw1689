@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OEMDevicePlatform xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <MinSectorCount>15099392</MinSectorCount>
+   <DevicePlatformIDs>
+    <ID>Allwinner.A64.Pine64</ID>
+    <ID>*</ID>
+  </DevicePlatformIDs>
+</OEMDevicePlatform>
+
+

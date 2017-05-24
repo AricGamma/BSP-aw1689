@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"
+  ReleaseType="Test"
+  OwnerType="OEM"
+  Platform="$(Chipset)"
+  Partition="$(PartitionName)"
+  Owner="Allwinner" Component="$(Chipset)" SubComponent="$(PartitionName)"
+  BinaryPartition="true">
+
+  <Components>
+    <BinaryPartition ImageSource="$(FileName)" />
+  </Components>
+
+</Package>

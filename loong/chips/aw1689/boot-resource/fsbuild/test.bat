@@ -1,0 +1,1 @@
+fsbuild.exe .\bootfs.ini .\split_xxxx.fex

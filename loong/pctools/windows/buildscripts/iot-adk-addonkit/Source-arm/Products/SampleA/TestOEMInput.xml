@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OEMInput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <Description>Contoso Windows 10 IoT Core RPi2 Test FFU with RPi2 BSP </Description>
+  <SOC>RPi2</SOC>
+  <SV>RASPBERRY PI</SV>
+  <Device>RPi2</Device>
+  <ReleaseType>Test</ReleaseType>
+  <BuildType>fre</BuildType>
+  <SupportedLanguages>
+    <UserInterface>
+      <Language>en-us</Language>
+    </UserInterface>
+    <Keyboard>
+      <Language>en-us</Language>
+    </Keyboard>
+    <Speech>
+      <Language>en-us</Language>
+    </Speech>
+  </SupportedLanguages>
+  <BootUILanguage>en-us</BootUILanguage>
+  <BootLocale>en-us</BootLocale>
+  <Resolutions>
+    <Resolution>1024x768</Resolution>
+  </Resolutions>
+  <AdditionalFMs>
+    <!-- Including BSP feature manifest -->
+    <AdditionalFM>%BSPSRC_DIR%\Rpi2\Packages\RPi2FM.xml</AdditionalFM>
+    <!-- Including OEM feature manifest -->
+    <AdditionalFM>%COMMON_DIR%\Packages\OEMCommonFM.xml</AdditionalFM>
+    <AdditionalFM>%SRC_DIR%\Packages\OEMFM.xml</AdditionalFM>
+    <!-- Including the test features -->
+    <AdditionalFM>%AKROOT%\FMFiles\arm\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>
+  </AdditionalFMs>
+  <Features>
+    <Microsoft>
+      <Feature>IOT_EFIESP</Feature>
+      <Feature>IOT_DMAP_DRIVER</Feature>
+      <Feature>IOT_CP210x_MAKERDRIVER</Feature>
+      <Feature>IOT_FTSER2K_MAKERDRIVER</Feature>
+      <!-- Following two required for Appx Installation -->
+      <Feature>IOT_UAP_OOBE</Feature>
+      <Feature>IOT_APP_TOOLKIT</Feature>
+      <!-- for Connectivity -->
+      <Feature>IOT_WEBB_EXTN</Feature>
+      <Feature>IOT_POWERSHELL</Feature>
+      <Feature>IOT_NETCMD</Feature>
+      <Feature>IOT_SSH</Feature>
+      <Feature>IOT_SIREP</Feature>
+      <!-- Enabling Test images -->
+      <Feature>IOT_DISABLE_UMCI</Feature>
+      <Feature>IOT_ENABLE_TESTSIGNING</Feature>
+      <Feature>IOT_TOOLKIT</Feature>
+    </Microsoft>
+    <OEM>
+      <!-- Inclide BSP Features -->
+      <Feature>RPI2_DRIVERS</Feature>
+      <!-- Include OEM features -->
+      <Feature>OEM_AppxMain</Feature>
+      <Feature>OEM_CustomCmd</Feature>
+      <Feature>OEM_ProvAuto</Feature>
+    </OEM>
+  </Features>
+  <Product>Windows 10 IoT Core</Product>
+</OEMInput>

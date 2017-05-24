@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FeatureManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <!-- Packages defined under BasePackages are always included when this feature manifest is included in the OEMInput file -->
+  <BasePackages>
+    <!-- This package defines in the OEM Package Version  -->
+    <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Registry.Version.cab"/>
+    <!-- This package tools required for OEM installation and servicing  -->
+    <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.OemTools.InstallTools.cab"/>
+  </BasePackages>
+  <Features>
+    <OEM>
+      <!-- Feature definitions below -->
+
+      <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Provisioning.Manual.cab">
+        <FeatureIDs>
+          <!-- This feature id brings in provisioning packages for manual installation via Custom.Cmd -->
+          <!-- Depends on OEM_CustomCmd -->
+          <FeatureID>OEM_ProvManual</FeatureID>
+          <!-- OEMCommon_ALL includes ProvAuto, so this is not included -->
+        </FeatureIDs>
+      </PackageFile>
+
+      <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.ImageSettings.CrashControl.cab">
+        <FeatureIDs>
+          <!-- This feature id sets the Crashdump settings -->
+          <FeatureID>OEMCommon_CrashControl</FeatureID>
+          <FeatureID>OEMCommon_ALL</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+
+      <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.ImageSettings.VideoMode.cab">
+        <FeatureIDs>
+          <!-- This feature id sets the headless/headed mode. Default is headed-->
+          <FeatureID>OEMCommon_VideoMode</FeatureID>
+          <FeatureID>OEMCommon_ALL</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+
+      <!-- Packages with Product specific contents included -->
+      <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Custom.Cmd.cab">
+        <FeatureIDs>
+          <FeatureID>OEM_CustomCmd</FeatureID>
+          <FeatureID>OEMCommon_ALL</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+      <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Provisioning.Auto.cab">
+        <FeatureIDs>
+          <FeatureID>OEM_ProvAuto</FeatureID>
+          <FeatureID>OEMCommon_ALL</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+
+    </OEM>
+    <OEMFeatureGroups>
+    <!-- Feature Constraints below -->
+    <!-- This ensures that only one of the Provisioning package is included -->
+      <FeatureGroup Constraint="ZeroOrOne">
+        <FeatureIDs>
+          <FeatureID>OEM_ProvAuto</FeatureID>
+          <FeatureID>OEM_ProvManual</FeatureID>
+        </FeatureIDs>
+      </FeatureGroup>
+    </OEMFeatureGroups>
+  </Features>
+</FeatureManifest>

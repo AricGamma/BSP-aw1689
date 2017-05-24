@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FeatureManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <BasePackages/>
+  <Features>
+    <OEM>
+	  <!-- Feature definitions below -->
+      <PackageFile Path="%SocPrebuiltCabPath%" Name="Allwinner.Appx.IoTCoreDefaultApp.cab">
+        <FeatureIDs>
+          <FeatureID>OEM_AppxIoTCoreDefaultApp</FeatureID>
+        </FeatureIDs>
+      </PackageFile>
+    </OEM>
+    <OEMFeatureGroups/>
+  </Features>
+</FeatureManifest>

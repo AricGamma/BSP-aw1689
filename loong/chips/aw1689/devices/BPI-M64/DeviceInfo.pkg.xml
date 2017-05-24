@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00" Platform="aw1689" Owner="Allwinner" Component="aw1689" SubComponent="DeviceInfo" OwnerType="SiliconVendor" ReleaseType="Test" Partition="MainOS">
+<Components>
+ <OSComponent>
+  <RegKeys>
+   <RegKey KeyName="$(hklm.system)\Platform\DeviceTargetingInfo">
+   	<RegValue Name="PhoneBootloaderVersion" Value="1.0" Type="REG_SZ"/>
+   	<RegValue Name="PhoneFirmwareRevision" Value="10.0.10586.0" Type="REG_SZ"/>
+   	<RegValue Name="PhoneHardwareRevision" Value="1.0" Type="REG_SZ"/>
+   	<RegValue Name="PhoneManufacturer" Value="Allwinner Technology" Type="REG_SZ"/>
+   	<RegValue Name="PhoneManufacturerModelName" Value="BPI-M64" Type="REG_SZ"/>
+   	<RegValue Name="PhoneMobileOperatorDisplayName" Value="Operator" Type="REG_SZ"/>
+   	<RegValue Name="PhoneMobileOperatorName" Value="000-88" Type="REG_SZ"/>
+   	<RegValue Name="PhoneModelName" Value="Pine64 Board" Type="REG_SZ"/>
+   	<RegValue Name="PhoneROMLanguage" Value="1.0" Type="REG_SZ"/>
+    <RegValue Name="PhoneROMVersion" Value="1.0" Type="REG_SZ"/>
+    <RegValue Name="PhoneSOCVersion" Value="1.0" Type="REG_SZ"/>
+    <RegValue Name="PhoneSupportLink" Value="http://www.allwinnertech.com/en/cont/media.htm" Type="REG_SZ" />
+    <RegValue Name="PhoneSupportPhoneNumber" Value="(86)-0756-3818333" Type="REG_SZ" />
+   </RegKey>
+
+   <RegKey KeyName="$(hklm.system)\Platform\DeviceTargetingInfo">
+    <RegValue Name="OneCoreFwV" Value="10.0.10586.0" Type="REG_SZ"/>
+    <RegValue Name="OneCoreManufacturer" Value="Allwinner Technology" Type="REG_SZ"/>
+    <RegValue Name="OneCoreManufacturerModelName" Value="BPI-M64 Board" Type="REG_SZ"/>   
+   </RegKey>
+
+   <RegKey KeyName="$(hklm.system)\ControlSet001\Control\SystemInformation">
+    <RegValue Name="SystemManufacturer" Value="Allwinner technology" Type="REG_SZ"/>
+    <RegValue Name="SystemProductName" Value="BPI-M64 Board" Type="REG_SZ"/>
+   </RegKey>
+   
+  </RegKeys>
+ </OSComponent>
+</Components>
+</Package>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"  Platform="Rockchip" Owner="RK" Component="3288FFRD" SubComponent="Registry" OwnerType="SiliconVendor" ReleaseType="Production" Partition="MainOS">
+<Components>
+  <OSComponent>
+    <RegKeys>
+	  <RegKey KeyName="$(hklm.system)\ControlSet01\Control">
+	    <RegValue Name="BootDriverFlags" Value="1C" Type="REG_DWORD"/>
+	  </RegKey>
+	  <RegKey KeyName="$(hklm.system)\ControlSet01\UsbStore\22070000">
+	    <RegValue Name="DeviceHackFlags" Value="40" Type="REG_DWORD"/>
+	  </RegKey>
+	</RegKeys>
+  </OSComponent>
+</Components>
+</Package>
