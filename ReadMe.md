@@ -6,11 +6,10 @@
 
 This project introduces how to develop, build, customize and package a Windows 10 IoT Core BSP for boards based on Allwinner aw1689(A64) SoC.
 Main contents:
-1. Source code of kernel drivers
-2. Source code of default UWP app
-3. UEFI binaries for boot
-4. Scripts for compiling, packaging and building `.ffu` image
-5. FeatureManifest configration files for building `.ffu` image
+1. UEFI binaries for boot
+2. Core driver binaries for Allwinner A64
+3. Scripts for compiling, packaging and building `.ffu` image
+4. FeatureManifest configration files for building `.ffu` image
 
 ## Directory
 
@@ -120,6 +119,9 @@ For your easy reference, we provide a serious of scripts to help to generate ffu
 After ffu generation complete, you can get the `.ffu` image file under `.\loong\ffu` for your board.
 
 > To change a board model, please modify the `DeviceName` variable in `SetBuidEnv.cmd` script.(Pine64 or BPI-M64)
+
+For more information about developing and debugging Windows 10 IoT Core on Allwinner A64 platform, see [
+Development Guide of Windows 10 IoT Core on A64](https://github.com/Leeway213/BSP-aw1689/blob/master/doc/Dev%20Guide.md).
 
 <h2 id="3">3. How to Deploy</h2>
 
