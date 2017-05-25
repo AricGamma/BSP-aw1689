@@ -4,7 +4,8 @@
 - [1. Action Supported in UEFI Process](#1)
 - [2. Boot Configuration Setup](#2)
 - [3. Perform Kernel Debug](#3)
-
+- [4. Driver Development for Windows 10 IoT Core](#4)
+- [5. App Development for Windows 10 IoT Core](#5)
 
 
 
@@ -125,3 +126,20 @@ If you didn't specify a static ip address of host computer such as "192.168.2.22
 
 
 #### For more information about Windows debugging, a detail document is shown in [msdn](https://msdn.microsoft.com/en-us/library/windows/hardware/mt219729(v=vs.85).aspx).
+
+
+<h2 id="4"> 4. Driver Development for Windows 10 IoT Core</h2>
+
+Universal Windows drivers enable developers to create a single driver that runs across multiple different device types, from embedded systems to tablets and desktop PCs. Hardware developers can use their existing components and device drivers across different form factors. Universal Windows drivers run on Windows 10 for desktop editions (Home, Pro, and Enterprise), Windows 10 Mobile, Windows 10 IoT Core, Windows Server 2016 Technical Preview, as well as other Windows 10 editions that share a common set of interfaces.
+
+For information about how to develop Windows drivers for UWP, see [Windows Driver dev guide](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/).
+
+Here are some [general driver samples](https://github.com/Microsoft/Windows-driver-samples) and [Allwinner A64 featured driver samples](https://github.com/Leeway213/driver-samples).
+
+
+<h2 id="5">5. App Development for Windows 10 IoT Core</h2>
+
+Windows 10 IoT Core supports three kinds of application types. UWP headed, UWP headless and win32 console application compiled to ARM architecture.
+
+Microsoft has provided very detailed [documents on WindowsOnDevices website](https://developer.microsoft.com/en-us/windows/iot/Docs) and [code samples on Github](https://github.com/ms-iot/samples).
+
