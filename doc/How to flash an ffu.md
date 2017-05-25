@@ -1,4 +1,4 @@
-#How to deploy a Win10 IoT ffu to a Pine64/BPI-M64 board
+# How to deploy a Win10 IoT ffu to a Pine64/BPI-M64 board
 
 ---
 
