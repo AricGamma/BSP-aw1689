@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FeatureManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">  
+   <Features>
+      <OEM> 
+         <PackageFile Path="%DevicePrebuiltCabPath%" Name="Allwinner.aw1689.boot0.cab" FeatureIdentifierPackage="true">
+       	 <FeatureIDs>
+         	 <FeatureID>AW1689_BOOT0</FeatureID>
+        	</FeatureIDs>
+      	</PackageFile>
+      	
+      	<PackageFile Path="%DevicePrebuiltCabPath%" Name="Allwinner.aw1689.uefi.cab" FeatureIdentifierPackage="true">
+       	 <FeatureIDs>
+         	 <FeatureID>AW1689_UEFI</FeatureID>
+        	</FeatureIDs>
+      	</PackageFile>
+
+      	<PackageFile Path="%DevicePrebuiltCabPath%" Name="Allwinner.aw1689.bootloader.cab" FeatureIdentifierPackage="true">
+       	 <FeatureIDs>
+         	 <FeatureID>AW1689_BOOTLOADER</FeatureID>
+        	</FeatureIDs>
+      	</PackageFile>
+      </OEM>
+  </Features>
+  
+   <OEMDevicePlatformPackages>
+    <PackageFile Device="Pine64" Path="%DevicePrebuiltCabPath%" Name="Allwinner.aw1689.DevicePlatform.cab" FeatureIdentifierPackage="true"/>    
+  </OEMDevicePlatformPackages>
+  
+  <DeviceSpecificPackages>
+     <PackageFile Device="Pine64" Path="%DevicePrebuiltCabPath%" Name="Allwinner.aw1689.DeviceInfo.cab"/> 
+  </DeviceSpecificPackages>
+  
+  <DeviceLayoutPackages>
+    <PackageFile SOC="aw1689" Path="%DevicePrebuiltCabPath%" Name="Allwinner.aw1689.DeviceLayout.cab" FeatureIdentifierPackage="true"/>
+  </DeviceLayoutPackages>
+
+</FeatureManifest>

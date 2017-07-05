@@ -1,7 +1,7 @@
 @echo off
 
 set Chipset=aw1689
-set DeviceName=PINE64
+set DeviceName=NanoPi
 set CpuPlatform=arm
 set OemInputTargets=TestOS
 set DriverBuildType=Release

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <Partitions>
+
+    <!-- boot0: size 128KB,offset 256 sectors -->
+    <Partition>
+      <Name>boot0</Name>
+      <TotalSectors>256</TotalSectors>
+      <Type>{E70A8437-2EE2-49C7-8222-6D53BA3E27A2}</Type>
+      <Bootable>true</Bootable>
+      <RequiredToFlash>true</RequiredToFlash>
+    </Partition>
+        
+    <!-- Uefi: size 2MB,offset 512 sectors -->
+    <Partition>
+      <Name>uefi</Name>
+      <TotalSectors>4096</TotalSectors>
+      <Type>{D2B8B71E-FBC5-4801-98FF-63DC4DF5F3E6}</Type>
+      <RequiredToFlash>true</RequiredToFlash>
+    </Partition>
+	
+	<Partition>
+      <Name>DPP</Name>
+      <FileSystem>FAT</FileSystem>
+      <TotalSectors>16384</TotalSectors>
+      <Type>{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}</Type>
+      <RequiredToFlash>true</RequiredToFlash>
+    </Partition>
+    
+    <!-- bootloader fs: offset 0x49184 sectors -->
+    <Partition>
+      <Name>bootloader</Name>
+      <TotalSectors>65536</TotalSectors>
+      <Type>{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}</Type>
+      <RequiredToFlash>true</RequiredToFlash>
+    </Partition>
+
+    <!-- EFIESP -->
+    <Partition>
+      <Name>EFIESP</Name>
+      <FileSystem>FAT</FileSystem>
+      <TotalSectors>65536</TotalSectors>
+      <Type>{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}</Type>
+      <RequiredToFlash>true</RequiredToFlash>
+    </Partition>
+
+    <!-- START MICROSOFT PARTITIONS -->
+
+   <Partition>
+      <Name>MainOS</Name>
+      <!-- PARTITION_BASIC_DATA_GUID -->
+      <Type>{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}</Type>
+      <!-- Accounts for 400MB free + 50 MB boot growth + 256MB page file as defined in registry by package src\baseos\prod\packages\arm\armmemory -->
+      <MinFreeSectors>512000</MinFreeSectors>
+      <ByteAlignment>0x800000</ByteAlignment>
+      <ClusterSize>0x1000</ClusterSize>
+      <FileSystem>NTFS</FileSystem>
+      <AttachDriveLetter>false</AttachDriveLetter>
+    </Partition>
+  
+    <Partition>
+      <Name>Data</Name>
+      <!-- PARTITION_BASIC_DATA_GUID -->
+      <Type>{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}</Type>
+      <UseAllSpace>true</UseAllSpace>
+      <ByteAlignment>0x800000</ByteAlignment>
+      <ClusterSize>0x4000</ClusterSize>
+      <FileSystem>NTFS</FileSystem>
+    </Partition>
+  </Partitions>
+
+  <!-- END MICROSOFT PARTITIONS -->
+
+  <SectorSize>512</SectorSize>
+  <ChunkSize>128</ChunkSize>
+  <!-- The start offset of the first partition must be 256 sectors! -->
+  <DefaultPartitionByteAlignment>0x20000</DefaultPartitionByteAlignment>
+</DeviceLayout>
