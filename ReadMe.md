@@ -129,6 +129,21 @@ Please refer to [How to Flash FFU](https://github.com/Leeway213/Win10-IoT-for-A6
 
 <h2 id="4">4. Known Issues</h2>
 
-1. Blue screen with error code: 0x0000000a when shuting down or rebooting caused by a PnP bug in audio drivers.
-2. WiFi Rx Delay caused by an SDIO issue.
-3. Sometimes ethernet device is missing after power on without a RJ45 cable plug-in.
+### Issues on all boards:
+1. Bluetooth is not available;
+2. Hot plug of USB is not supported.
+3. Ethernet has a good TX performance but poor on RX.
+
+
+### Issues on PINE64:
+1. USB cannot be used directly without a USB hub plugging in as medium;
+2. Wlan has a good TX performance but poor on RX;
+3. The upper USB interface is configured to Device Mode which is used for virtual kernel debug net over USB.
+
+### Issues on BPI-M64:
+1. WiFi is not available.
+
+### Issues on NanoPi-A64:
+1. The same as PINE64, wlan has a good TX performane but poor on RX; 
+2. The wlan device cannot be enabled after soft reboot until cutting off the power and re-power;
+3. The upper USB interface is configured to Device Mode which is used for virtual kernel debug net over USB.
